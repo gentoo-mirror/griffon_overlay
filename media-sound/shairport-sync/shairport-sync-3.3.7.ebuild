@@ -24,6 +24,7 @@ RDEPEND="
 	net-dns/avahi
 	soxr? ( media-libs/soxr )
 	alsa? ( media-libs/alsa-lib )
+	alac? ( media-libs/libalac )
 	pulseaudio? ( media-sound/pulseaudio )
 	!systemd? ( dev-libs/libdaemon )
 "
