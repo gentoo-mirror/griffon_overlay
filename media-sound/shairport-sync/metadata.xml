@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+
+<pkgmetadata>
+  <maintainer type="person">
+    <email>yily_101@163.com</email>
+    <name>GriffOn Yi</name>
+    <description>Primary maintainer</description>
+  </maintainer>
+  <longdescription>
+    Shairport Sync is an AirPlay audio player – it plays audio streamed from
+    iTunes, iOS, Apple TV and macOS devices and AirPlay sources such as
+    Quicktime Player and ForkedDaapd, among others.
+
+    Audio played by a Shairport Sync-powered device stays synchronised with
+    the source and hence with similar devices playing the same source.
+    In this way, synchronised multi-room audio is possible for players that
+    support it, such as iTunes and the macOS Music app.
+
+    Shairport Sync runs on Linux, FreeBSD and OpenBSD. It does not support
+    AirPlay video or photo streaming.
+  </longdescription>
+  <use>
+    <flag name="openssl">Uses openssl for encryption.</flag>
+    <flag name="mbedtls">Uses mbedtls for encryption.</flag>
+    <flag name="soxr">Add resample support use libsoxr</flag>
+    <flag name="alac">Include the Apple ALAC Decoder</flag>
+  </use>
+</pkgmetadata>
