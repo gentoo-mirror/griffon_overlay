@@ -14,10 +14,12 @@ SLOT="0"
 
 KEYWORDS="~amd64"
 
-IUSE="alsa pulseaudio soxr systemd alac openssl mbedtls"
+IUSE="alsa pulseaudio soundio soxr alac openssl mbedtls convolution"
 REQUIRED_USE="|| ( alsa pulseaudio ) ^^ ( openssl mbedtls )"
 
 RDEPEND="
+	acct-user/shairport-sync
+	acct-group/shairport-sync
 	dev-libs/libconfig
 	openssl? ( dev-libs/openssl )
 	mbedtls? ( net-libs/mbedtls )
@@ -26,9 +28,16 @@ RDEPEND="
 	alsa? ( media-libs/alsa-lib )
 	alac? ( media-libs/libalac )
 	pulseaudio? ( media-sound/pulseaudio )
-	!systemd? ( dev-libs/libdaemon )
+	soundio? ( media-libs/libsoundio )
+	dev-libs/libdaemon
+	convolution? ( media-libs/libsndfile )
 "
 DEPEND="${RDEPEND}"
+
+src_prepare() {
+	eapply "${FILESDIR}/gentoo-makefile-00.patch"
+	eapply_user
+}
 
 src_configure() {
 	autoreconf -i -f
@@ -44,14 +53,17 @@ src_configure() {
 	if use pulseaudio ;then
 		myconf="$myconf --with-pa"
 	fi
+	if use soundio ;then
+		myconf="$myconf --with-soundio"
+	fi
 	if use soxr ;then
 		myconf="$myconf --with-soxr"
 	fi
-	if ! use systemd ;then
-		myconf="$myconf --with-libdaemon"
-	fi
 	if use alac ;then
 		myconf="$myconf --with-apple-alac"
+	fi
+	if use convolution ;then
+		myconf="$myconf --with-convolution"
 	fi
 	econf \
 		--with-avahi \
@@ -60,17 +72,7 @@ src_configure() {
 		--with-stdout \
 		--with-systemd \
 		--with-systemv \
+		--with-libdaemon \
 		$myconf
 
-}
-
-src_install() {
-	patch < "${FILESDIR}/gentoo-install.patch"
-	emake DESTDIR="${D}" install
-}
-
-pkg_postinst()
-{
-	getent group shairport-sync &>/dev/null || groupadd -r shairport-sync >/dev/null
-	getent passwd shairport-sync &> /dev/null || useradd -r -M -g shairport-sync -s /sbin/nologin -G audio shairport-sync >/dev/null
 }

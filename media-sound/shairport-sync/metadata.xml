@@ -24,6 +24,8 @@
     <flag name="openssl">Uses openssl for encryption.</flag>
     <flag name="mbedtls">Uses mbedtls for encryption.</flag>
     <flag name="soxr">Add resample support use libsoxr</flag>
-    <flag name="alac">Include the Apple ALAC Decoder</flag>
+    <flag name="alac">Include the Apple ALAC Decoder.</flag>
+    <flag name="convolution">Add convolution filter support.</flag>
+    <flag name="soundio">Add support for soundio backend.</flag>
   </use>
 </pkgmetadata>
