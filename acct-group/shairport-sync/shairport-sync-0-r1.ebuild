@@ -6,4 +6,4 @@ EAPI=7
 inherit acct-group
 
 DESCRIPTION="Group for Shairport-sync"
-ACCT_GROUP_ID=328
+ACCT_GROUP_ID=-1
