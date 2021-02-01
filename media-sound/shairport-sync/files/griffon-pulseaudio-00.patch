@@ -1,0 +1,13 @@
+--- shairport-sync-3.3.7/scripts/shairport-sync.service.in.orig	2021-02-01 21:22:47.980781852 +0800
++++ shairport-sync-3.3.7/scripts/shairport-sync.service.in	2021-02-01 21:46:00.600996363 +0800
+@@ -5,8 +5,10 @@
+ After=avahi-daemon.service
+ Wants=network-online.target
+ After=network.target network-online.target
++After=pulseaudio.service
+ 
+ [Service]
++ExecStartPre=/bin/sleep 5
+ ExecStart=@prefix@/bin/shairport-sync
+ User=shairport-sync
+ Group=shairport-sync

@@ -36,6 +36,7 @@ DEPEND="${RDEPEND}"
 
 src_prepare() {
 	eapply "${FILESDIR}/gentoo-makefile-00.patch"
+	eapply "${FILESDIR}/griffon-pulseaudio-00.patch"
 	eapply_user
 }
 
