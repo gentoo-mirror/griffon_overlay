@@ -14,8 +14,8 @@ SLOT="0"
 
 KEYWORDS="~amd64"
 
-IUSE="alsa pulseaudio soundio soxr alac openssl mbedtls convolution"
-REQUIRED_USE="|| ( alsa pulseaudio ) ^^ ( openssl mbedtls )"
+IUSE="alsa pulseaudio jack soundio soxr alac openssl mbedtls convolution"
+REQUIRED_USE="|| ( alsa pulseaudio jack ) ^^ ( openssl mbedtls )"
 
 RDEPEND="
 	acct-user/shairport-sync
@@ -31,7 +31,9 @@ RDEPEND="
 	soundio? ( media-libs/libsoundio )
 	dev-libs/libdaemon
 	convolution? ( media-libs/libsndfile )
+	jack? ( virtual/jack )
 "
+
 DEPEND="${RDEPEND}"
 
 src_prepare() {
@@ -50,6 +52,9 @@ src_configure() {
 	fi
 	if use alsa ;then
 		myconf="$myconf --with-alsa"
+	fi
+	if use jack ;then
+		myconf="$myconf --with-jack"
 	fi
 	if use pulseaudio ;then
 		myconf="$myconf --with-pa"
