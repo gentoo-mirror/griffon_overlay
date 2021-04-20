@@ -1,0 +1,8 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=KMS Emulator in C
+EAPI=7
+HOMEPAGE=https://github.com/Wind4/vlmcsd
+KEYWORDS=~amd64
+SLOT=0
+SRC_URI=https://github.com/Wind4/vlmcsd/archive/svn1113.tar.gz -> vlmcsd-1113.tar.gz
+_md5_=2c9fc2d88f9bed84f3cda969abf34b8a
