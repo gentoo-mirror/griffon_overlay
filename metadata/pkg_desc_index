@@ -1,5 +1,5 @@
 acct-group/shairport-sync 0-r1: Group for Shairport-sync
 acct-user/shairport-sync 0-r1: User for Shairport-sync
 media-libs/alac 0.0.7: Apple Lossless Audio Codec library
-media-sound/shairport-sync 3.3.7 3.3.8: Shairport Sync is an AirPlay audio player
+media-sound/shairport-sync 3.3.7 3.3.8 3.3.9: Shairport Sync is an AirPlay audio player
 net-misc/vlmcsd 1113: KMS Emulator in C
