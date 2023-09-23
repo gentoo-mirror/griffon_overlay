@@ -27,5 +27,7 @@
     <flag name="alac">Include the Apple ALAC Decoder.</flag>
     <flag name="convolution">Add convolution filter support.</flag>
     <flag name="soundio">Add support for soundio backend.</flag>
+    <flag name="airplay2">Support for AirPlay protocol of version 2.</flag>
+    <flag name="pipewire">Add support for pipewire backend.</flag>
   </use>
 </pkgmetadata>
