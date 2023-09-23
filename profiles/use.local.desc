@@ -2,9 +2,11 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
+media-sound/shairport-sync:airplay2 - Support for AirPlay protocol of version 2.
 media-sound/shairport-sync:alac - Include the Apple ALAC Decoder.
 media-sound/shairport-sync:convolution - Add convolution filter support.
 media-sound/shairport-sync:mbedtls - Uses mbedtls for encryption.
 media-sound/shairport-sync:openssl - Uses openssl for encryption.
+media-sound/shairport-sync:pipewire - Add support for pipewire backend.
 media-sound/shairport-sync:soundio - Add support for soundio backend.
 media-sound/shairport-sync:soxr - Add resample support use libsoxr
