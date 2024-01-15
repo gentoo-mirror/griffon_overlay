@@ -1,4 +1,4 @@
-BDEPEND=sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) || ( >=sys-devel/autoconf-2.72-r1:2.72 >=sys-devel/autoconf-2.71-r6:2.71 ) >=sys-devel/libtool-2.4.7
+BDEPEND=sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=dev-build/automake-1.16.5:1.16 ) || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7
 DEFINED_PHASES=configure
 DEPEND=acct-user/shairport-sync acct-group/shairport-sync dev-libs/libconfig openssl? ( dev-libs/openssl ) mbedtls? ( net-libs/mbedtls ) net-dns/avahi soxr? ( media-libs/soxr ) alsa? ( media-libs/alsa-lib ) alac? ( media-libs/alac ) pipewire? ( media-video/pipewire ) pulseaudio? ( media-sound/pulseaudio ) soundio? ( media-libs/libsoundio ) dev-libs/libdaemon convolution? ( media-libs/libsndfile ) jack? ( virtual/jack )
 DESCRIPTION=Shairport Sync is an AirPlay audio player
@@ -12,5 +12,5 @@ RDEPEND=acct-user/shairport-sync acct-group/shairport-sync dev-libs/libconfig op
 REQUIRED_USE=|| ( alsa pulseaudio jack pipewire ) ^^ ( openssl mbedtls )
 SLOT=0
 SRC_URI=https://github.com/mikebrady/shairport-sync/archive/4.3.1.tar.gz -> shairport-sync-4.3.1.tar.gz
-_eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	5f729b9cb10d5eda573cd604c93c6dc5
+_eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	e4cf390b19033d5ca443765bc8537b81
 _md5_=dca2be704ef5acab4d6dc134f5c6871a
