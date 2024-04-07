@@ -1,0 +1,11 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DESCRIPTION=Portage helper tools written in shell
+EAPI=8
+HOMEPAGE=https://github.com/windfail/portagit
+INHERIT=git-r3
+LICENSE=BSD-4
+PROPERTIES=live
+SLOT=0
+_eclasses_=git-r3	fbb2889c81f3a05910c1524db69425c1
+_md5_=90ed37c187870e16b4c89300b9a2c6c6
