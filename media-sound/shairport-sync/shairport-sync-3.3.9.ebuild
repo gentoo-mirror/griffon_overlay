@@ -23,7 +23,7 @@ RDEPEND="
 	dev-libs/libconfig
 	openssl? ( dev-libs/openssl )
 	mbedtls? ( net-libs/mbedtls )
-	net-dns/avahi
+	net-dns/avahi[mdnsresponder-compat]
 	soxr? ( media-libs/soxr )
 	alsa? ( media-libs/alsa-lib )
 	alac? ( media-libs/alac )
